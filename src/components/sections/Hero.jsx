@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Github, Mail, BookOpen, ArrowDown } from 'lucide-react'
 import { personalInfo } from '../../data/personal'
+import profile from '../../assets/profile.png'
 
 function Hero() {
     const scrollTo = (id) =>
@@ -67,7 +68,7 @@ function Hero() {
         >
             {/* Background photo */}
             <img
-                src="../assets/profile.png"
+                src={profile}
                 alt=""
                 aria-hidden="true"
                 style={{
