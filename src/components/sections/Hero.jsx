@@ -67,7 +67,7 @@ function Hero() {
         >
             {/* Background photo */}
             <img
-                src="./src/assets/profile.png"
+                src="../assets/profile.png"
                 alt=""
                 aria-hidden="true"
                 style={{
