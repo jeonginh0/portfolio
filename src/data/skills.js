@@ -23,10 +23,16 @@ export const skills = [
         ],
     },
     {
+        category: 'Cloud & DevOps',
+        items: [
+            { name: 'AWS EC2', level: 70 },
+            { name: 'Docker', level: 60 },
+        ],
+    },
+    {
         category: 'Tools',
         items: [
             { name: 'Git', level: 85 },
-            { name: 'Docker', level: 60 },
             { name: 'Slack', level: 80 },
             { name: 'Notion', level: 80 },
         ],
