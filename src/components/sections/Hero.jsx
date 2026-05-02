@@ -65,10 +65,6 @@ function Hero() {
                 paddingTop: '80px',
                 textAlign: 'center',
                 overflow: 'hidden',
-                backgroundImage: `url(${profile})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: '25% top',
-                backgroundSize: '48%',
             }}
         >
 
@@ -252,13 +248,19 @@ function Hero() {
             </div>
 
             <style>{`
+                .hero-section {
+                    background-image: url(${profile});
+                    background-repeat: no-repeat;
+                    background-position: 25% top;
+                    background-size: 48%;
+                }
                 @keyframes nudge {
                     0%, 100% { transform: translateY(0); opacity: 0.6; }
-                    50%       { transform: translateY(7px); opacity: 0.25; }
+                    50% { transform: translateY(7px); opacity: 0.25; }
                 }
                 @media (max-width: 640px) {
                     .hero-section {
-                        background-size: 100%;   /* 모바일은 화면 너비에 맞춤 */
+                        background-image: none;
                     }
                 }
             `}</style>
