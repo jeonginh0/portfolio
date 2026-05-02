@@ -68,7 +68,7 @@ function Hero() {
                 backgroundImage: `url(${profile})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: '25% top',
-                backgroundSize: '48%',   /* ← 이 값으로 크기 조절: 크게 = 숫자 ↑, 작게 = 숫자 ↓ */
+                backgroundSize: '48%',
             }}
         >
 
