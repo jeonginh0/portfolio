@@ -53,6 +53,7 @@ function Hero() {
         <section
             id="hero"
             aria-label="소개"
+            className="hero-section"
             style={{
                 position: 'relative',
                 minHeight: '100vh',
@@ -64,21 +65,12 @@ function Hero() {
                 paddingTop: '80px',
                 textAlign: 'center',
                 overflow: 'hidden',
+                backgroundImage: `url(${profile})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: '25% top',
+                backgroundSize: '48%',   /* ← 이 값으로 크기 조절: 크게 = 숫자 ↑, 작게 = 숫자 ↓ */
             }}
         >
-            {/* Background photo */}
-            <img
-                src={profile}
-                alt=""
-                aria-hidden="true"
-                style={{
-                    position: 'absolute', inset: 0,
-                    width: '50%', height: '100%',
-                    objectFit: 'cover',
-                    objectPosition: 'center top',
-                    zIndex: 0,
-                }}
-            />
 
             {/* Gradient overlay */}
             <div
@@ -263,6 +255,11 @@ function Hero() {
                 @keyframes nudge {
                     0%, 100% { transform: translateY(0); opacity: 0.6; }
                     50%       { transform: translateY(7px); opacity: 0.25; }
+                }
+                @media (max-width: 640px) {
+                    .hero-section {
+                        background-size: 100%;   /* 모바일은 화면 너비에 맞춤 */
+                    }
                 }
             `}</style>
         </section>
