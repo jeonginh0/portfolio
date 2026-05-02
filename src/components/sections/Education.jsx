@@ -80,7 +80,7 @@ function Education() {
                                 </p>
 
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                                    {[status, `GPA ${gpa}`].map((text) => (
+                                    {[status, `학점 ${gpa}`].map((text) => (
                                         <span
                                             key={text}
                                             style={{
