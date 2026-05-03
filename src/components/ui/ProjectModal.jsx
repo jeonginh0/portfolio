@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { X, Github, ExternalLink, Calendar, User, Wrench, Lock } from 'lucide-react'
+import { X, Github, ExternalLink, Calendar, User, Users, Wrench, Star, Lock } from 'lucide-react'
 
 function ProjectModal({ project, onClose }) {
   // ESC 키로 닫기
@@ -157,6 +157,7 @@ function ProjectModal({ project, onClose }) {
             }}>
               {[
                 { icon: <Calendar size={14} />, label: '기간', value: project.detail?.period },
+                { icon: <Users size={14} />, label: '팀 구성', value: project.detail?.team },
                 { icon: <User size={14} />, label: '역할', value: project.detail?.role },
               ].filter(item => item.value).map(({ icon, label, value }) => (
                 <div key={label} style={{
@@ -212,6 +213,39 @@ function ProjectModal({ project, onClose }) {
                         flexShrink: 0, marginTop: '7px',
                       }} />
                       {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* 개인 기여 */}
+            {project.detail?.contributions?.length > 0 && (
+              <div>
+                <div style={{
+                  display: 'flex', alignItems: 'center', gap: '7px',
+                  fontFamily: 'var(--font-body)', fontSize: '13px',
+                  fontWeight: 600, color: 'var(--color-fg-muted)',
+                  textTransform: 'uppercase', letterSpacing: '0.06em',
+                  marginBottom: '12px',
+                }}>
+                  <Star size={13} />
+                  개인 기여
+                </div>
+                <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {project.detail.contributions.map((item, i) => (
+                    <li key={i} style={{
+                      display: 'flex', alignItems: 'flex-start', gap: '10px',
+                      fontFamily: 'var(--font-body)', fontSize: '14px',
+                      fontWeight: 400, lineHeight: 1.6,
+                      color: 'var(--color-fg-secondary)',
+                    }}>
+                      <span style={{
+                        width: '5px', height: '5px', borderRadius: '50%',
+                        backgroundColor: 'var(--color-fg-muted)',
+                        flexShrink: 0, marginTop: '7px',
+                      }} />
+                      {item}
                     </li>
                   ))}
                 </ul>
