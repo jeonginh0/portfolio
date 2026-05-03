@@ -3,7 +3,7 @@ export const projects = [
         id: 1,
         title: 'Medi-X - 가상환자 기반 한의대 임상 역량 평가 플랫폼',
         description: '한의대 학생들의 임상 역량을 평가하기 위한 연구 목적의 플랫폼입니다.',
-        image: null,
+        image: '../public/projects/Medi-X-Main.png',
         detail: {
             summary:
                 'Node.js(Express)와 PostgreSQL 기반의 한의대 임상 역량 평가 플랫폼입니다. ' +
@@ -43,7 +43,7 @@ export const projects = [
         id: 2,
         title: '스펙메이트 - AI 기반 맞춤형 PC 견적 추천 서비스',
         description: '사용자 요구사항을 분석하여 최적의 PC 견적을 구성해주는 AI 기반 서비스입니다.',
-        image: null,
+        image: '../public/projects/specmate-Main.png',
         detail: {
             summary:
                 'Spring Boot와 PostgreSQL 기반의 AI 맞춤형 PC 견적 추천 서비스입니다. ' +
@@ -83,7 +83,7 @@ export const projects = [
         id: 3,
         title: 'Renalyze - AI 기반 전/월세 계약서 분석 플랫폼',
         description: '전/월세 계약서를 업로드하면 AI가 위험요소와 누락 항목을 분석하고 조언해주는 서비스입니다.',
-        image: null,
+        image: '../public/projects/Renalyze-Main.png',
         detail: {
             summary:
                 'Nest.js와 Next.js 기반의 AI 전/월세 계약서 분석 플랫폼입니다. ' +
