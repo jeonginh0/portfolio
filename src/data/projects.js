@@ -1,5 +1,5 @@
   import mediXImg from '../assets/projects/Medi-X-Main.png'                                                                                                         
-  import specMateImg from '../assets/projects/Specmate-Main.png'
+  import specMateImg from '../assets/projects/specmate-Main.png'
   import renalyzeImg from '../assets/projects/Renalyze-Main.png' 
 
 export const projects = [
