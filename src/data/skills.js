@@ -4,6 +4,7 @@ export const skills = [
         items: [
             { name: 'Java', level: 80 },
             { name: 'JavaScript', level: 75 },
+            { name: 'TypeScript', level: 50 },
             { name: 'Python', level: 50 },
         ],
     },
@@ -12,6 +13,7 @@ export const skills = [
         items: [
             { name: 'Spring', level: 90 },
             { name: 'Node.js(Express.js)', level: 70 },
+            { name: 'Nest.js', level: 60 },
         ],
     },
     {
@@ -20,6 +22,7 @@ export const skills = [
             { name: 'PostgreSQL', level: 80 },
             { name: 'MySQL', level: 70 },
             { name: 'MongoDB', level: 60 },
+            { name: 'Redis', level: 60 },
         ],
     },
     {
