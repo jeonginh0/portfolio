@@ -12,7 +12,7 @@ function About() {
         {
             icon: <Code2 size={17} />,
             label: '주요 스택',
-            value: 'Spring · Node.js',
+            value: 'Java · Spring Boot · Node.js',
         },
         {
             icon: <Cake size={17} />,
@@ -80,8 +80,9 @@ function About() {
                                 color: 'var(--color-fg-secondary)', margin: '0 0 20px 0',
                             }}
                         >
-                            백엔드 개발을 중심으로 프론트엔드까지 학습하고 적용하는 개발자입니다.
-                            Spring과 Node.js로 견고한 서버를 설계하기 위해 노력하고 있습니다.
+                            Java, Spring Boot, Node.js 기반으로 API를 설계하고 구현하는 신입 백엔드 개발자입니다.
+                            3개 한의대 198명이 사용한 평가 플랫폼 Medi-X를 운영하며, 동시 로그인 시 해시 연산이 단일 스레드를
+                            점유하는 병목을 찾아 로그인 응답 시간을 6000ms에서 1200ms로 줄였습니다.
                         </p>
 
                         <p
@@ -91,9 +92,9 @@ function About() {
                                 color: 'var(--color-fg-secondary)', margin: 0,
                             }}
                         >
-                            빠르게 변화하고 발전하는 트렌드속에서 새로운 기술을 거리낌없이 학습하고 적용시키는 과정을 즐깁니다.
-                            코드 품질과 쿼리 최적화에 관심이 많으며, 더 나은 해결책을 찾기 위해
-                            끊임없이 학습합니다.
+                            스펙메이트에서는 가격 변동이 잦은 데이터 특성에 맞춰 캐시 대신 인덱스로 조회 성능을 개선했습니다.
+                            기술을 붙이기 전에 원인과 데이터를 먼저 확인합니다. Git Flow, Swagger, Notion, Figma를 활용한
+                            협업에 익숙하며, 최근에는 Claude Code 기반 개발 워크플로우를 개인 프로젝트에 적용하고 있습니다.
                         </p>
                     </div>
 

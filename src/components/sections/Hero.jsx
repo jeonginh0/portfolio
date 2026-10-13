@@ -68,6 +68,17 @@ function Hero() {
             }}
         >
 
+            {/* 프로필 이미지 — Hero 전체 배경 */}
+            <img
+                src={profile}
+                alt={`${personalInfo.name} 프로필 사진`}
+                style={{
+                    position: 'absolute', inset: 0, zIndex: 0,
+                    width: '100%', height: '100%',
+                    objectFit: 'cover', objectPosition: '18% center', // 모바일에서도 인물이 보이도록 왼쪽 기준
+                }}
+            />
+
             {/* Gradient overlay */}
             <div
                 aria-hidden="true"
@@ -248,20 +259,9 @@ function Hero() {
             </div>
 
             <style>{`
-                .hero-section {
-                    background-image: url(${profile});
-                    background-repeat: no-repeat;
-                    background-position: 25% top;
-                    background-size: 48%;
-                }
                 @keyframes nudge {
                     0%, 100% { transform: translateY(0); opacity: 0.6; }
                     50% { transform: translateY(7px); opacity: 0.25; }
-                }
-                @media (max-width: 640px) {
-                    .hero-section {
-                        background-image: none;
-                    }
                 }
             `}</style>
         </section>

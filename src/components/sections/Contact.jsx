@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, Github, BookOpen, MapPin, ArrowUpRight, Copy, Check } from 'lucide-react'
+import { Mail, ArrowUpRight, Copy, Check } from 'lucide-react'
 import { personalInfo } from '../../data/personal'
 import { useInView } from '../../hooks/useInView'
 
@@ -19,23 +19,12 @@ function Contact() {
         })
     }
 
+    // 연락처는 이메일만 노출
     const links = [
         {
             label: '이메일',
             value: personalInfo.email,
             isEmail: true,
-        },
-        {
-            label: 'GitHub',
-            value: 'github.com/jeonginh0',
-            href: personalInfo.github,
-            icon: <Github size={16} />,
-        },
-        {
-            label: '블로그',
-            value: 'backendinho.tistory.com',
-            href: personalInfo.blog,
-            icon: <BookOpen size={16} />,
         },
     ]
 

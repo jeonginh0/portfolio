@@ -1,4 +1,4 @@
-import { education } from '../../data/education'
+import { education, certifications } from '../../data/education'
 import { useInView } from '../../hooks/useInView'
 
 function Education() {
@@ -11,7 +11,7 @@ function Education() {
         <section
             ref={ref}
             id="education"
-            aria-label="학력"
+            aria-label="학력 및 자격증"
             className="section-padding"
             style={{ backgroundColor: 'var(--color-bg)' }}
         >
@@ -109,6 +109,73 @@ function Education() {
                         </div>
                     ))}
                 </div>
+
+                {/* 자격증 */}
+                {certifications?.length > 0 && (
+                    <>
+                        <h3
+                            style={{
+                                fontFamily: 'var(--font-display)',
+                                fontSize: 'clamp(22px, 3vw, 28px)',
+                                fontWeight: 700, lineHeight: 1.2,
+                                letterSpacing: '-0.02em',
+                                color: 'var(--color-fg)', margin: '48px 0 8px 0',
+                                ...fx(120 + education.length * 80),
+                            }}
+                        >
+                            자격증
+                        </h3>
+
+                        <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                            {certifications.map(({ id, name, issuer, date }, i) => (
+                                <li
+                                    key={id}
+                                    style={{
+                                        display: 'grid',
+                                        gridTemplateColumns: '1fr auto',
+                                        gap: '4px 24px',
+                                        padding: '20px 0',
+                                        borderBottom: i < certifications.length - 1
+                                            ? '1px solid var(--color-border-subtle)'
+                                            : 'none',
+                                        alignItems: 'start',
+                                        ...fx(200 + (education.length + i) * 80),
+                                    }}
+                                >
+                                    <div>
+                                        <p
+                                            style={{
+                                                fontFamily: 'var(--font-body)', fontSize: '16px',
+                                                fontWeight: 600, color: 'var(--color-fg)',
+                                                margin: '0 0 4px 0',
+                                            }}
+                                        >
+                                            {name}
+                                        </p>
+                                        <p
+                                            style={{
+                                                fontFamily: 'var(--font-body)', fontSize: '14px',
+                                                fontWeight: 400, color: 'var(--color-fg-secondary)',
+                                                margin: 0,
+                                            }}
+                                        >
+                                            {issuer}
+                                        </p>
+                                    </div>
+                                    <span
+                                        style={{
+                                            fontFamily: 'var(--font-body)', fontSize: '13px',
+                                            fontWeight: 400, color: 'var(--color-fg-muted)',
+                                            whiteSpace: 'nowrap', paddingTop: '4px',
+                                        }}
+                                    >
+                                        {date}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </>
+                )}
             </div>
         </section>
     )
